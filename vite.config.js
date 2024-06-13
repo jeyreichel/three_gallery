@@ -1,10 +1,13 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 export default defineConfig({
-  base: '/3D-art-gallery',
   build: {
     rollupOptions: {
-      input: '/main.js',
+      input: "/main.js",
     },
   },
 });
+
